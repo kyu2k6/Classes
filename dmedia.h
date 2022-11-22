@@ -1,5 +1,8 @@
 //This is the Parent Class Digital Media
 
+#ifndef mediah
+#define mediah
+
 #include <iostream>
 #include <cstring>
 
@@ -10,11 +13,14 @@ class dmedia {
 	public:
 		dmedia();
 		char* getTitle();
-		int getYear();
+		int* getYear();
+		virtual int getType();
 
 	private:
-		char* title;
+		char title[30];
 		int year;
 
 };
-i
+
+#endif
+

@@ -1,6 +1,9 @@
-//This is the Child Class Video Games
+#ifndef vgamesh
+#define vgamesh
+
 
 #include <iostream>
+#include <cstring>
 #include "dmedia.h"
 
 using namespace std;
@@ -9,11 +12,14 @@ class vgames : public dmedia {
 
 	public:
 		vgames();
-		int getPublisher();
-		int getRating();
+		virtual int getType();
+		char* getPublisher();
+		int* getRating();
 	private:
-		char* publisher;
+		char publisher[30];
 		int rating;
 
 };
+
+#endif
 
